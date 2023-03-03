@@ -1,1 +1,1 @@
-# Resolvendo-Exerc-cios
+# Resolvendo-Exercícios
