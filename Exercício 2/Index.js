@@ -1,4 +1,4 @@
-function nodeFibonacci(n) {
+function Fibonacci(n) {
     let a = 0;
     let b = 1;
     while (b < n) {
@@ -6,7 +6,7 @@ function nodeFibonacci(n) {
     }
     return b === n;
   }
-  const num = parseInt(prompt("Digite um número: "));
+  const num = parseInt(prompt("Digite um número aqui: "));
   
   const fib = [0, 1];
   while (fib[fib.length - 1] < num) {
@@ -16,5 +16,5 @@ function nodeFibonacci(n) {
   if (fib.includes(num)) {
     console.log(`O número ${num} pertence à sequência de Fibonacci.`);
   } else {
-    console.log(`O número ${num} não pertence à sequência de Fibonacci.`);
+  console.log(`O número ${num} não pertence à sequência de Fibonacci.`);
 }
