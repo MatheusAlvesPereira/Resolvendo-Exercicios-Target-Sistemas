@@ -1,0 +1,13 @@
+.nav__item{
+    display: inline-block;
+    margin: 5em;
+    margin-left: 11em;
+}
+
+h1{
+    text-align: center;
+}
+
+a:hover{
+    text-decoration: none;
+}
