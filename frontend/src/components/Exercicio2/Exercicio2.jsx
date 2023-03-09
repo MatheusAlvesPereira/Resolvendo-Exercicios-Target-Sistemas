@@ -1,12 +1,13 @@
 import Home from "../home";
-import Fibonacci from "./Fibonacci.jsX";
+import Fibo from "./Fibonacci.jsx";
+import './Exercicio2.css'
 
 export default function Exercicio2(){
     return(
         <>
             <Home/>
-            <h1>Exercicio<span>2</span></h1>
-            <Fibonacci/>
+            <h1>Exercicio2</h1>
+            <Fibo/>
         </>
     );
 }
