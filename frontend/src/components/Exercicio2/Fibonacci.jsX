@@ -1,46 +1,32 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-export default function Fibonacci() {
-
+export default function FibonacciSequence() {
   const [num, setNum] = useState("");
-  const [pertence, setPertence] = useState(false);
+  const [message, setMessage] = useState("");
 
-  function fibonacci(n) {
-    if (n === 0) {
-      return 0;
-    } else if (n === 1) {
-      return 1;
-    } else {
-      return fibonacci(n - 1) + fibonacci(n - 2);
-    }
-  }
-
-  function verificarFibonacci() {
-    const numInt = parseInt(num);
-    let i = 0;
-    while (fibonacci(i) <= numInt) {
-      if (fibonacci(i) === numInt) {
-        setPertence(true);
-        break;
+  function checkFibonacci() {
+    let a = 0, b = 1, c;
+    while (b <= num) {
+      if (b === num) {
+        setMessage(`${num} pertence à sequência de Fibonacci.`);
+        return;
       }
-      i++;
+      c = a + b;
+      a = b;
+      b = c;
     }
+    setMessage(`${num} não pertence à sequência de Fibonacci.`);
   }
 
   return (
-    <div>
-      <label>
+    <div className='box'>
+      <h1>Verificando um determinado número pertence ou não à Sequência de Fibonacci</h1>
+      <label className='box__title'>
         Digite um número inteiro:
-        <input
-          type="number"
-          value={num}
-          onChange={(e) => setNum(e.target.value)}
-        />
+        <input type="number" value={num} onChange={(e) => setNum(parseInt(e.target.value))} />
       </label>
-      <button onClick={verificarFibonacci}>Verificar</button>
-      {pertence ? (<p>O número {num} pertence à sequência de Fibonacci.</p>) 
-       : (<p>O número {num} não pertence à sequência de Fibonacci.</p>)
-      }
+      <button onClick={checkFibonacci}>Verificar</button>
+      <p>{message}</p>
     </div>
   );
 }
